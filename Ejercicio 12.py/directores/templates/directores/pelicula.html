@@ -1,0 +1,16 @@
+{% extends 'directores/base.html' %}
+
+{% block title %}Pelicula{% endblock %}
+
+{% block content %}
+<h1>Pelicula</h1>
+<h2>Informacion</h2>
+<p>Lista de Peliculas:</p>
+    {% for peliculaDirector in pelicula %}
+        <br><>----<> PELICULA <>----<></br>
+        <br>Titulo: {{peliculaDirector.nombre}}</br>
+        <br>Descripcion: {{peliculaDirector.descripcion}}</br>
+        <br>Duracion: {{peliculaDirector.duracion}} min</br>
+        <br>Director de la Pelicula:{{peliculaDirector.director}}</br>
+    {% endfor %}
+{% endblock %}
